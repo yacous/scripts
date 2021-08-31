@@ -2,8 +2,6 @@
 
 # script to create / delete file
 
-
-
 # variables
 option=$1
 file=$2
@@ -19,17 +17,21 @@ delete_file(){
         echo "$file has been deleted"
 }
 
-# conditions pour lancer la fonctions adéquate
+show_options(){
+        echo "
+                Options:
+                        --create : to create file (touch)
+                        --delete : to delete file/folder (rm -rf)
+
+        "
+
+}
+
+# conditions pour lancer la fonction adéquate
 if [ "$1" = "--create" ]; then
 	create_file
 elif [ "$1" = "--delete" ]; then
 	delete_file
 else
-	echo "
-	Options:
-        	--create : to create file (touch)
-        	--delete : to delete file/folder (rm -rf)
-
-	"
-
+	show_options
 fi
