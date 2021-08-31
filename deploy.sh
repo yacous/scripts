@@ -2,12 +2,7 @@
 
 # script to create / delete file
 
-echo "
-Options:
-	--create : to create file (touch)
-	--delete : to delete file/folder (rm -rf)
 
-"
 
 # variables
 option=$1
@@ -30,5 +25,11 @@ if [ "$1" = "--create" ]; then
 elif [ "$1" = "--delete" ]; then
 	delete_file
 else
-	echo "Please use an option"
+	echo "
+	Options:
+        	--create : to create file (touch)
+        	--delete : to delete file/folder (rm -rf)
+
+	"
+
 fi
