@@ -22,6 +22,7 @@ show_options(){
                 Options:
                         --create : to create file (touch)
                         --delete : to delete file/folder (rm -rf)
+			--help : show help
 
         "
 
@@ -32,6 +33,10 @@ if [ "$1" = "--create" ]; then
 	create_file
 elif [ "$1" = "--delete" ]; then
 	delete_file
+elif [ "$1" = "--help" ]; then
+	show_options
 else
+	echo "
+	Please choose an option (deploy.sh --option file)"
 	show_options
 fi
