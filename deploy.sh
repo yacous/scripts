@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# script to create / delete file
+
 echo "
 Options:
 	--create : to create file (touch)
