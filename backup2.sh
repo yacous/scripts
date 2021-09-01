@@ -28,7 +28,7 @@ print_end_status_message(){
 }
 
 estimate_file_space_usage(){
-        du -sh $backup_destination/$archive_file
+        du -sh $backup_destination/$archive_file 2> /dev/null
 }
 
 main(){
@@ -40,4 +40,12 @@ main(){
 }
 
 # lancer la fonction main qui englobe toutes les fonctions
-main
+# if -z : si $1 est vide then echo, sinon main
+if [ -z $1 ] ; then
+	echo "
+	You have to choose a folder to backup
+	"
+	exit 1
+else
+	main
+fi
