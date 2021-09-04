@@ -1,5 +1,5 @@
 #!/bin/bash
-# script to verify if I am root
+# script to verify if the current user is root
 
 verif_root(){
 if [ "$EUID" = "0" ] ; then
@@ -8,8 +8,11 @@ if [ "$EUID" = "0" ] ; then
 	"
 else
 	echo "
-	No, you are not ROOT
+	No, you are $(whoami)
 	"
 fi
 }
 verif_root
+
+# or 
+# echo  NO you are `whoami`
