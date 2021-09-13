@@ -17,5 +17,7 @@ fi
 
 verif_root
 
+exit 0
+
 # or 
 # echo  NO you are `whoami`
