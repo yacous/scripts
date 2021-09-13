@@ -5,7 +5,8 @@ verif_root(){
 if [ `whoami` = 'root' ] ; then
 	printf "\nYes, you are Root\n\n"
 else
-	printf "\nNo, you are $(whoami)\nYou don't have permissions to run $0\n\n"
+	printf "\nNo, you are $(whoami)\n
+You don't have permissions to run $0\n\n"
 fi
 }
 
