@@ -11,7 +11,8 @@ if [ `whoami` = 'root' ] ; then
 else
 	echo "
 	No, you are $(whoami)
-	"
+	You don't have permissions to run $0	
+"
 fi
 }
 
