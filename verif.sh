@@ -32,4 +32,5 @@ verif_and_msg() {
 clear
 
 verif_and_msg
+
 exit 0
