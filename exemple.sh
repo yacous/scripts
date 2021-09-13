@@ -13,9 +13,7 @@
 
 clear
 
-echo "
-
-Options :
+printf " \n\nOptions :
 
 	--create : create file
 
@@ -25,9 +23,6 @@ Options :
 
 	--start : start service
 
-	--infos : help
-
-
-"
+	--infos : help\n\n\n"
 
 exit 0
