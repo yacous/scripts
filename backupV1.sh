@@ -43,3 +43,5 @@ clear
 
 # lancer la fonction main qui englobe toutes les fonctions
 main
+
+exit 0
