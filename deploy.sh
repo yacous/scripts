@@ -10,15 +10,15 @@ file=$2
 
 create_file(){
 	touch $file
-        echo "$file has been created"
+        echo "$file has been created successfully"
 }
 
 delete_file(){
         rm -rf $file
-        echo "$file has been deleted"
+        echo "$file has been deleted successfully"
 }
 
-details (){
+show_details (){
 	if [[ -a $file ]] ; then      
 		echo $file
         	echo "Sa taille est de $(du -sh $file 2> /dev/null | awk -F "/" '{print $1}')"
@@ -47,7 +47,7 @@ if [ "$1" = "--create" ]; then
 elif [ "$1" = "--delete" ]; then
 	delete_file
 elif [ "$1" = "--details" ]; then
-	details
+	show_details
 elif [ "$1" = "--help" ]; then
 	show_options
 else
