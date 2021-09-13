@@ -45,7 +45,8 @@ clear
 # lancer la fonction main qui englobe toutes les fonctions
 # if -z : si $1 est vide then echo, sinon main
 if [ -z $1 ] ; then
-	printf "\nVeuillez indiquer les dossiers à sauvegarder sous forme de :\n\n# sh script.sh /tmp/folder1 /tmp/file2 /etc\n\n"
+	printf "\nVeuillez indiquer les dossiers à sauvegarder sous forme de :\n
+  # sh script.sh /tmp/folder1 /tmp/file2 /etc\n\n"
 else
 	main
 fi
