@@ -3,14 +3,9 @@
 
 verif_root(){
 if [ `whoami` = 'root' ] ; then
-	echo "
-	Yes, you are ROOT
-	"
+	printf "\nYes, you are Root\n\n"
 else
-	echo "
-	No, you are $(whoami)
-	You don't have permissions to run $0	
-"
+	printf "\nNo, you are $(whoami)\nYou don't have permissions to run $0\n\n"
 fi
 }
 
