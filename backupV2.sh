@@ -48,7 +48,6 @@ if [ -z $1 ] ; then
 	echo "
 	Veuillez indiquer les dossiers à sauvegarder sous forme de : $ sh script.sh /tmp/folder1 /tmp/file2 /etc
 	"
-	exit 1
 else
 	main
 fi
