@@ -15,14 +15,7 @@ read -p "Veuillez indiquer le nom du dossier / fichier: " name
 
 # fonction pour vérifier si le fichier est présent et afficher les détails
 verif_and_msg() {
-  if [[ -d $dest/$name ]] ; then
-	echo -e "
-\033[1;32m$msg_ok\033[00m"
-	echo $dest/$name
-	echo "Sa taille est de $(du -sh $dest/$name 2> /dev/null | awk -F "/" '{print $1}')"
-	echo "Son type est $(file $dest/$name | awk -F ":" '{print $2}')
-	     "
-  elif [[ -f $dest/$name ]] ; then
+  if [[ -a $dest/$name ]] ; then
 	echo -e "
 \033[1;32m$msg_ok\033[00m"
 	echo $dest/$name
