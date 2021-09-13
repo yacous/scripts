@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # Description : vérifier si le fichier / dossier est présent et afficher sa taille et son type
 
 # variables :
