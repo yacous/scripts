@@ -6,3 +6,5 @@ for fichier in `ls *.sh`
 do
         cp $fichier /tmp/scripts
 done
+
+exit 0
