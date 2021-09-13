@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # Description : Mon premier vrai script pour créer un backup v2
 # Veuillez indiquer les dossiers à sauvegarder sous forme de : $ sh script.sh /tmp/folder1 /tmp/file2 /etc
 
@@ -51,3 +52,5 @@ if [ -z $1 ] ; then
 else
 	main
 fi
+
+exit 0
