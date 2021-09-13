@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # Description : mon premier vrai script pour créer un backup
 
 # variables
