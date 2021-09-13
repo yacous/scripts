@@ -1,8 +1,6 @@
 #!/bin/bash
 # Description : script to verify if the current user is root
 
-clear
-
 verif_root(){
 if [ `whoami` = 'root' ] ; then
 	echo "
@@ -15,6 +13,8 @@ else
 "
 fi
 }
+
+clear
 
 verif_root
 
