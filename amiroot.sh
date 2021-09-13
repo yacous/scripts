@@ -4,7 +4,7 @@
 clear
 
 verif_root(){
-if [ "$EUID" = "0" ] ; then
+if [ `whoami` = 'root' ] ; then
 	echo "
 	Yes, you are ROOT
 	"
