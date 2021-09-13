@@ -55,3 +55,5 @@ else
 	Please choose an option (deploy.sh --option file)"
 	show_options
 fi
+
+exit 0
