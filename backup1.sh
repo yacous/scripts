@@ -1,5 +1,5 @@
 #!/bin/bash
-# mon premier vrai script pour créer un backup
+# Description : mon premier vrai script pour créer un backup
 
 # variables
 folders_to_backup="/home/user1 /etc/alsa"
@@ -37,6 +37,8 @@ main(){
     print_end_status_message
     estimate_file_space_usage
 }
+
+clear
 
 # lancer la fonction main qui englobe toutes les fonctions
 main

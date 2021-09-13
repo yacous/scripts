@@ -1,6 +1,6 @@
 #!/bin/bash
-# mon premier vrai script pour créer un backup
-# veuillez indiquer les dossiers à sauvegarder sous forme de : $ sh script.sh /tmp/folder1 /tmp/file2 /etc
+# Description : Mon premier vrai script pour créer un backup v2
+# Veuillez indiquer les dossiers à sauvegarder sous forme de : $ sh script.sh /tmp/folder1 /tmp/file2 /etc
 
 # variables
 folders_to_backup=$@
@@ -39,11 +39,13 @@ main(){
         estimate_file_space_usage
 }
 
+clear
+
 # lancer la fonction main qui englobe toutes les fonctions
 # if -z : si $1 est vide then echo, sinon main
 if [ -z $1 ] ; then
 	echo "
-	You have to choose a folder to backup
+	Veuillez indiquer les dossiers à sauvegarder sous forme de : $ sh script.sh /tmp/folder1 /tmp/file2 /etc
 	"
 	exit 1
 else

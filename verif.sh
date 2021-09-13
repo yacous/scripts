@@ -1,5 +1,5 @@
 #!/bin/bash
-# vérifier si le fichier / dossier est présent et afficher sa taille et son type
+# Description : vérifier si le fichier / dossier est présent et afficher sa taille et son type
 
 # variables :
 msg_ok="Votre perle est bien là !"
@@ -28,6 +28,8 @@ verif_and_msg() {
 		"
   fi
 }
+
+clear
 
 verif_and_msg
 exit 0

@@ -1,5 +1,7 @@
 #!/bin/bash
-# script to verify if the current user is root
+# Description : script to verify if the current user is root
+
+clear
 
 verif_root(){
 if [ "$EUID" = "0" ] ; then
@@ -12,6 +14,7 @@ else
 	"
 fi
 }
+
 verif_root
 
 # or 

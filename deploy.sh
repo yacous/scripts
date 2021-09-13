@@ -1,12 +1,13 @@
 #!/bin/bash
 
-# script to create / delete file
+# Description : Script to create / delete file
 
 # variables
 option=$1
 file=$2
 
 #définir les fonctions
+
 create_file(){
 	touch $file
         echo "$file has been created"
@@ -37,6 +38,8 @@ show_options(){
         "
 
 }
+
+clear
 
 # conditions pour lancer la fonction adéquate
 if [ "$1" = "--create" ]; then
