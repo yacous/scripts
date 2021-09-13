@@ -28,14 +28,12 @@ show_details (){
 	fi
 }
 show_options(){
-        echo "
+        printf "
                 Options:
                         --create  : to create file (touch)
                         --delete  : to delete file/folder (rm -rf)
 			--details : to print file/folder details
-			--help    : show help
-
-        "
+			--help    : show help\n\n"
 
 }
 
@@ -51,8 +49,8 @@ elif [ "$1" = "--details" ]; then
 elif [ "$1" = "--help" ]; then
 	show_options
 else
-	echo "
-	Please choose an option (deploy.sh --option file)"
+        printf "\nPlease choose an option and select a file :\n
+# deploy.sh --option file\n"
 	show_options
 fi
 
