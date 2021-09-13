@@ -8,6 +8,8 @@ msg_no="Nous sommes bien désolé !"
 # $dest
 # $name
 
+clear
+
 # emplacement où vous voulez vérifier
 read -p "Veuillez indiquer l'emplacement que vous voulez vérifier: " dest
 
@@ -29,8 +31,6 @@ verif_and_msg() {
 		"
   fi
 }
-
-clear
 
 verif_and_msg
 
