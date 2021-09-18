@@ -42,7 +42,7 @@ save_bash_history(){
 
 backup_files(){
         mkdir -p $backup_destination/$folder_name
-	cp -v $folders_to_backup $backup_destination/$folder_name
+	cp -v -r $folders_to_backup $backup_destination/$folder_name > /var/log/backup
 	rm bash_history
 }
 
