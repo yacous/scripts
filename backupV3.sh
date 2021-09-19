@@ -14,11 +14,12 @@
 #														     #
 ######################################################################################################################
 
-# variables
+# variables and arrays
 
 file=$1
 folders_to_backup=$(cat $file 2> /dev/null)
 backup_destination=$2
+log_files=(/var/log/backup_logs /var/log/backup_error)
 
 # declarer les fonctions
 create_folder_filename(){
@@ -40,15 +41,24 @@ save_bash_history(){
 	folders_to_backup=$(cat $file)
 }
 
-backup_files(){
+backup_and_logs(){
         mkdir -p $backup_destination/$folder_name
-	cp -v -r $folders_to_backup $backup_destination/$folder_name > /var/log/backup
+
+	# boucle pour ajouter la date et l'heure aux deux fichiers logs
+	for i in ${log_files[@]}
+	do
+		echo $(date +%F_%R: ) > $i
+	done
+	
+	# copier les fichiers et envoyer le stdout vers le backup_logs et le stderr vers backup_error
+	cp -v -r $folders_to_backup $backup_destination/$folder_name 1>> ${log_files[0]} 2>> ${log_files[1]}
 	rm bash_history
 }
 
 print_end_status_message(){
-        printf "\nBackup finished\n"
-        date
+        printf "\nBackup Finished !\nto check logs: "
+	echo ${log_files[@]}
+	date
 }
 
 estimate_file_space_usage(){
@@ -60,7 +70,7 @@ main(){
 	create_folder_filename
 	print_start_status_message
 	save_bash_history
-	backup_files
+	backup_and_logs
 	print_end_status_message
         estimate_file_space_usage
 }
@@ -72,7 +82,7 @@ if [ -f $1 ] && [ -d $2 ] ; then
 main
 else
 printf "\nVeuillez indiquer les dossiers à sauvegarder sous forme de :\n
-  # sh script.sh file folder\n\n"
+  # sh script.sh txt_file folder_destination\n\n"
 exit 1
 fi
 
