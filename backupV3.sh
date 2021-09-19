@@ -81,7 +81,7 @@ if [ -f $1 ] && [ -d $2 ] ; then
 	main
 else
 	printf "\nVeuillez indiquer les dossiers à sauvegarder sous forme de :\n
-  # sh script.sh txt_file folder_destination\n\n"
+  # sh script.sh txt_file destination_file\n\n"
 	exit 1
 fi
 
