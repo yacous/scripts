@@ -45,8 +45,7 @@ backup_and_logs(){
         mkdir -p $backup_destination/$folder_name
 
 	# boucle pour ajouter la date et l'heure aux deux fichiers logs
-	for i in ${log_files[@]}
-	do
+	for i in ${log_files[@]} ; do
 		echo $(date +%F_%R: ) > $i
 	done
 	
