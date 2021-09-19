@@ -78,11 +78,11 @@ clear
 
 # if $1 est un fichier et $2 dossier, lancer fonction main, sinon msg d'erreur et exit 1
 if [ -f $1 ] && [ -d $2 ] ; then
-main
+	main
 else
-printf "\nVeuillez indiquer les dossiers à sauvegarder sous forme de :\n
+	printf "\nVeuillez indiquer les dossiers à sauvegarder sous forme de :\n
   # sh script.sh txt_file folder_destination\n\n"
-exit 1
+	exit 1
 fi
 
 exit 0
