@@ -1,5 +1,17 @@
 #!/bin/bash
 
+
+########################################################
+#						                                           #
+# Description : script pour checker la Ram             #
+#						                                           #
+# Auteur : Yacous				                               #
+#						                                           #
+# Date : 17/01/2022				                             #
+#						                                           #
+########################################################
+
+
 #variables
 ram_value=$(free -m | grep Mem | awk -F " " '{print $4}')
 
