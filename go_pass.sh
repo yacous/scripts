@@ -16,7 +16,7 @@
 
 # help en cas de besoin
 
-if [ $1 = "-help" ]
+if [[ $1 = "-help" ]]
 then
     head -n 16 go_pass.sh | tail -n 15
     exit 0
