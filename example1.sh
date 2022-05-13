@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 ########################################################
 #						       #
 # Description : Description du script		       #
