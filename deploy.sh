@@ -19,7 +19,8 @@ delete_file(){
 }
 
 show_details (){
-	if [[ -a $file ]] ; then      
+	if [[ -a $file ]]
+	then      
 		echo $file
         	echo "Sa taille est de $(du -sh $file 2> /dev/null | awk -F "/" '{print $1}')"
         	echo "Son type est $(file $file | awk -F ":" '{print $2}')"
