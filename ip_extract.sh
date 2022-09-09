@@ -2,15 +2,15 @@
 
 ################################################################################
 #                                                                              #
-# Description : Script pour tester un mot de passe sur plusieurs IP en ssh     #
+# Description :                                                                #
 #                                                                              #
 # Auteur : Yacous                                                              #
 #                                                                              #
 # Date : 21/07/2022                                                            #
 #                                                                              #
-# Utilisation : veuillez renseigner vos adresses IP dans un fichier ./ip.txt,  #
-# puis lancez le script 'sh go_pass.sh, les adresses IP dont le mot de passe   #
-# est correct seront renseignées dans le fichier ./hosts.txt                   #
+# Utilisation :                                                                #
+#                                                                              #
+#                                                                              #
 #                                                                              #
 ################################################################################
 
