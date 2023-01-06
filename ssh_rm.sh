@@ -10,8 +10,8 @@
 # Création : 04/11/2022         Update : 06/01/2023                            #
 #                                                                              #
 # Utilisation : veuillez renseigner vos adresses IP dans un fichier ./ip.txt,  #
-# puis lancez le script 'sh go_pass.sh, les adresses IP dont le mot de passe   #
-# est correct seront renseignées dans le fichier ./hosts.txt                   #
+#                                                                              #
+#                                                                              #
 #                                                                              #
 ################################################################################
 
